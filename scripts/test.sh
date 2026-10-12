@@ -48,8 +48,7 @@ fi
 
 # static code analysis (pylint)
 print_step "Pylint code analysis"
-uv run pylint --fail-under=1 src
-# uv run pylint --fail-under=8 src
+uv run pylint --fail-under=6 src
 # uv run pylint --exit-zero src scripts
 
 # typo check (typos)

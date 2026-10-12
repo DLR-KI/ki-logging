@@ -13,20 +13,13 @@ SPDX-License-Identifier: CC-BY-4.0
 This is a small Python package designed to simplify the process of enabling consistent logging across multiple projects.
 Instead of copying code from one project to another, this package provides a simple, reusable solution.
 
-This project is a component of the Federated Learning (FL) platform, serving as a proof of concept for the [Catena-X](https://catena-x.net/en) project.
-The FL platform aims to demonstrate the potential of federated learning in a practical, real-world context.
-
-For a comprehensive understanding of the FL platform, please refer to the official [FL platform documentation](https://dlr-ki.github.io/fl-documentation).
-
-A complete list of all repositories relevant to the FL platform can be found [here](https://dlr-ki.github.io/fl-documentation#repositories).
-
 ## Install
 
 /// tab | uv
     new: true
 
 ```bash
-uv add "dlr-logging @ git+https://github.com/DLR-KI/fl-logging-base.git@main"
+uv add "ki-logging @ git+https://github.com/DLR-KI/ki-logging.git@main"
 ```
 
 ///
@@ -35,7 +28,7 @@ uv add "dlr-logging @ git+https://github.com/DLR-KI/fl-logging-base.git@main"
     new: false
 
 ```bash
-pip install -U "git+https://github.com/DLR-KI/fl-logging-base.git@main"
+pip install -U "git+https://github.com/DLR-KI/ki-logging.git@main"
 ```
 
 ///
@@ -45,7 +38,7 @@ pip install -U "git+https://github.com/DLR-KI/fl-logging-base.git@main"
 
 ```toml
 dependencies = [
-  "dlr-logging @ git+https://github.com/DLR-KI/fl-logging-base.git@main",
+  "ki-logging @ git+https://github.com/DLR-KI/ki-logging.git@main",
 ]
 ```
 
@@ -56,7 +49,7 @@ dependencies = [
 
 ```python
 install_requires = [
-    "dlr-logging @ git+https://github.com/DLR-KI/fl-logging-base.git@main",
+    "ki-logging @ git+https://github.com/DLR-KI/ki-logging.git@main",
 ]
 ```
 
@@ -67,7 +60,7 @@ install_requires = [
 
 ```toml
 [tool.poetry.dependencies]
-dlr-logging = { git = "git+https://github.com/DLR-KI/fl-logging-base.git", branch = "main" }
+ki-logging = { git = "git+https://github.com/DLR-KI/ki-logging.git", branch = "main" }
 ```
 
 ///
@@ -102,7 +95,7 @@ log_config["handlers"]["loki"] = {
     "class": "logging_loki.LokiHandler",
     "url": "http://localhost:3100/loki/api/v1/push",
     "tags": {
-        "app": "fl.server"
+        "app": "fl.server",
     },
     "auth": ["admin", "admin"],
     "version": "1",

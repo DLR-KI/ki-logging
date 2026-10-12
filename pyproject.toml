@@ -6,12 +6,12 @@
 # package, this name will be registered for you. It will determine how
 # users can install this project, e.g.:
 #
-# $ uv add "dlr-logging @ git+https://github.com/DLR-KI/fl-logging-base.git"
+# $ uv add "ki-logging @ git+https://github.com/DLR-KI/ki-logging.git"
 #
 # There are some restrictions on what makes a valid project name
 # specification here:
 # https://packaging.python.org/specifications/core-metadata/#name
-name = "dlr-logging"  # Required
+name = "ki-logging"  # Required
 
 # Versions should comply with PEP 440:
 # https://www.python.org/dev/peps/pep-0440/
@@ -39,7 +39,7 @@ readme = "README.md" # Optional
 # 'Programming Language' classifiers above, 'pip install' will check this
 # and refuse to install the project if the version does not match. See
 # https://packaging.python.org/guides/distributing-packages-using-setuptools/#python-requires
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 
 # SPDX license expression indicating the license for the distribution.
 # Value is mapped to the License-Expression field in the core metadata.
@@ -173,17 +173,17 @@ all = [
 # maintainers, and where to support the project financially. The key is
 # what's used to render the link text on PyPI.
 [project.urls]  # Optional
-#"Changelog" = "https://github.com/DLR-KI/fl-logging-base/blob/main/CHANGELOG.md"
-"Documentation" = "https://dlr-ki.github.io/fl-logging-base/"
-"Homepage" = "https://github.com/DLR-KI/fl-logging-base"
-"Issue Tracker" = "https://github.com/DLR-KI/fl-logging-base/issues"
-"Release Notes" = "https://github.com/DLR-KI/fl-logging-base/releases"
-"Source Code" = "https://github.com/DLR-KI/fl-logging-base"
+#"Changelog" = "https://github.com/DLR-KI/ki-logging/blob/main/CHANGELOG.md"
+"Documentation" = "https://dlr-ki.github.io/ki-logging/"
+"Homepage" = "https://github.com/DLR-KI/ki-logging"
+"Issue Tracker" = "https://github.com/DLR-KI/ki-logging/issues"
+"Release Notes" = "https://github.com/DLR-KI/ki-logging/releases"
+"Source Code" = "https://github.com/DLR-KI/ki-logging"
 
 # The following would provide a command line executable called `fl-template`
 # which executes the function `main` inside `__main__.py` from this package when invoked.
 #[project.scripts]  # Optional
-#dlr-logging = "dlr.ki.logging.__main__:main"
+#ki-logging = "dlr.ki.logging.__main__:main"
 
 # This is configuration specific to the `setuptools` build backend.
 # If you are using a different build backend, you will need to change this.

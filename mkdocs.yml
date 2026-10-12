@@ -3,8 +3,8 @@
 
 site_name: Logging Base Module
 
-repo_name: dlr-logging
-repo_url: https://github.com/DLR-KI/fl-logging-base
+repo_name: ki-logging
+repo_url: https://github.com/DLR-KI/ki-logging
 
 theme:
   name: material
@@ -113,7 +113,7 @@ extra:
     - icon: dlr-ki
       link: https://www.dlr.de/ki/en
     - icon: fontawesome/brands/square-github
-      link: https://github.com/DLR-KI/fl-logging-base
+      link: https://github.com/DLR-KI/ki-logging
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.16.44/dist/katex.min.js

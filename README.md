@@ -3,79 +3,60 @@ SPDX-FileCopyrightText: 2026 German Aerospace Center (DLR)
 SPDX-License-Identifier: Apache-2.0
 -->
 
-# Logging Base Module
+# DLR-KI Logging Module
 
-[![DOI](https://zenodo.org/badge/770398220.svg)](https://doi.org/10.5281/zenodo.13951179 )
+<!-- [![DOI](https://zenodo.org/badge/770398220.svg)](https://doi.org/10.5281/zenodo.13951179) -->
 
 This repository contains a small Python package designed to simplify the process of enabling consistent logging across multiple projects.
 Instead of copying code from one project to another, this package provides a simple, reusable solution.
 
-This project is a component of the Federated Learning (FL) platform, serving as a proof of concept for the [Catena-X](https://catena-x.net/en) project.
-The FL platform aims to demonstrate the potential of federated learning in a practical, real-world context.
-
-For a comprehensive understanding of the FL platform, please refer to the official [FL platform documentation](https://dlr-ki.github.io/fl-documentation).
-
-A complete list of all repositories relevant to the FL platform can be found [here](https://dlr-ki.github.io/fl-documentation#repositories).
+This repository is a fork of [`fl-logging-base`](https://github.com/DLR-KI/fl-logging-base).
+The original repository was archived along with all other federated learning components.
+This repository is now maintained independently — all future updates, bug fixes,
+and extensions will be published here.
 
 ## Get Started
 
 This README.md is primarily intended for developers and contributors, providing necessary information for setup, installation, and contribution guidelines.
-If you're interested in using or testing this project, we recommend starting with the [GitHub pages](https://dlr-ki.github.io/fl-logging-base).
+If you're interested in using or testing this project, we recommend starting with the [GitHub pages](https://dlr-ki.github.io/ki-logging).
 They offer a more user-friendly interface and comprehensive guides to get you started.
+
+## Repository Structure
+
+The repository is organized as follows:
+
+- [docs](docs): Markdown-based user documentation published on the [GitLab Pages](https://dlr-ki.github.io/ki-logging).
+- [examples](examples): Logging configuration file examples.
+- [LICENSES](LICENSES): All license files used somewhere in this project. Also see [LICENSE.md](LICENSE.md).
+- [scripts](scripts): Scripts extending this project.
+- [src](src): Project source code.
 
 ## Requirements
 
-- Python 3.10 or later  
-  `which python`
-- [uv](https://docs.astral.sh/uv/)  
-  `curl -LsSf https://astral.sh/uv/install.sh | sh`
+- Python 3.11 or later
+- [uv](https://docs.astral.sh/uv/)
 
 ## Install
 
+For developer it is recommended to install all dependency groups.
+
 ```bash
-# create virtual environment and install dependencies
-./dev install
-# or just
 uv sync --all-groups
-```
-
-## Helpers
-
-```txt
-$ ./dev --help
-usage: ./dev <action> [options]
-
-positional arguments:
-  {clean,coverage,coverage-report,doc,doc-build,help,install,licenses,licenses-check,lint,lint-code,lint-doc,lint-scripts,mypy,safety-check,start,test,version,versions}
-                        Available sub commands
-    help                Show this help message and exit
-    start               Run the application
-    test                Run all tests
-    lint                Run all linter
-    lint-code           Run code linter
-    lint-doc            Run documentation linter
-    lint-scripts        Run bash script linter
-    mypy                Run type checker
-    coverage            Run unit tests
-    coverage-report     Generate test coverage report
-    doc                 Start documentation server
-    doc-build           Build documentation
-    licenses            Generate licenses
-    licenses-check      Check licenses
-    safety-check        Check dependencies for known security vulnerabilities
-    install             Install package
-    clean               Clean up local files
-    version             Show package version
-    versions            Show versions
-
-options:
-  --no-http-serve       Do not serve the action result via HTTP
 ```
 
 ## Contribution
 
-- Type-Save and linting with mypy+flake8
-- Scripts and examples for linux, wsl (bash)
+Please follow the contribution rules:
+
+- use typed Python (type annotations)
+- verify Python static code checks with ruff
+- document fixes, enhancements, new features, ...
+- write scripts and examples OS independent or at least with linux, wsl support
+- verify shell script static code check compliance with [ShellCheck](https://www.shellcheck.net/wiki/)
+- verify [REUSE Specification 3.0](https://reuse.software/spec/) compliance for all files
+- verify project license compliance without any license conflicts (e.g. for 3rd party libraries, data, models, ...)
+- verify documentation (markdown) compliance w.r.t. [markdown linting rules](https://github.com/DavidAnson/markdownlint#rules--aliases) further specified inside the [.markdownlint-cli2.jsonc](.markdownlint-cli2.jsonc) configuration file
+- run all tests successfully
 
 ### Documentation
 
@@ -83,23 +64,32 @@ This projects is using the Docstring style from
 [Google](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings).
 At least public classes, methods, fields, ... should be documented.
 
-```python
-"""
-This is the single line short description.
+For further documentation we are using [Markdown](https://www.markdownguide.org/) documentation with
+[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+See the [docs](docs) folder for more details.
 
-This is the multiline or long description.
-Note, that the whole Docstring support markdown styling.
+To locally serve the documentation, feel free to use:
 
-The long description can also contains multiple paragraphs.
-
-Args:
-    log_filepath (str): Log file path.
-    ensure_log_dir (bool, optional): Create directory for the log file if not exists. Defaults to True.
-
-Returns:
-    dict[str, Any]: logging configuration dict
-"""
+```bash
+uv run mkdocs serve
 ```
+
+### Contributors
+
+<a href="https://github.com/HeinrichAD">
+  <img
+    src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/5962361?v=4&h=80&w=80&fit=cover&mask=circle&maxage=7d"
+    alt="Florian Heinrich"
+    title="Florian Heinrich"
+  />
+</a>
+<a href="https://github.com/BeFranke">
+  <img
+    src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/31000306?v=4&h=80&w=80&fit=cover&mask=circle&maxage=7d"
+    alt="Benedikt Franke"
+    title="Benedikt Franke"
+  />
+</a>
 
 ## Citation
 
@@ -108,21 +98,3 @@ For accurate citation, refer to the corresponding metadata in the [CITATION.cff]
 ## License
 
 Please see the file [LICENSE.md](LICENSE.md) for further information about how the content is licensed.
-
-## Credits
-
-<div>
-    <div style="display: inline-block; width: 42%;">
-        <img src="./docs/assets/logo/DLR_Logo_EN_black.svg#gh-light-mode-only" alt="DLR" style="width: 100%;" />
-        <img src="./docs/assets/logo/DLR_Logo_EN_white.svg#gh-dark-mode-only" alt="DLR" style="width: 100%" />
-        <div style="text-align: center;">
-            <img src="./docs/assets/logo/catena-x-black.svg#gh-light-mode-only" alt="Catena-X" style="width: 80%;" />
-            <img src="./docs/assets/logo/catena-x-white.svg#gh-dark-mode-only" alt="Catena-X" style="width: 80%;" />
-        </div>
-    </div>
-    <div style="display: inline-block; width: 55%; float: right;">
-        <img src="./docs/assets/logo/EN_fundedbyEU_VERTICAL_RGB_POS.svg#gh-light-mode-only" alt="European Union" style="width: 44%;" />
-        <img src="./docs/assets/logo/EN_fundedbyEU_VERTICAL_RGB_NEG.svg#gh-dark-mode-only" alt="European Union" style="width: 44%;" />
-        <img src="./docs/assets/logo/bmwk_en.png" alt="BMWK" style="width: 44%; float: right;" />
-    </div>
-</div>

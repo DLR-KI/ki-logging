@@ -65,7 +65,7 @@ hooks = [
     "--ignore-packages",
     # list of packages to ignore during prek
     # since these are not available on Python Package Index (PyPI):
-    "dlr-logging"
+    "ki-logging"
   ]}
 ]
 repo = "https://github.com/FHPythonUtils/LicenseCheck"

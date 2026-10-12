@@ -2,9 +2,9 @@
 # SPDX-License-Identifier: Apache-2.0
 
 version = 1
-SPDX-PackageName = "dlr-logging"
+SPDX-PackageName = "ki-logging"
 SPDX-PackageSupplier = ["2026 German Aerospace Center (DLR)"]
-SPDX-PackageDownloadLocation = "https://github.com/DLR-KI/fl-logging-base"
+SPDX-PackageDownloadLocation = "https://github.com/DLR-KI/ki-logging"
 
 [[annotations]]
 path = ["uv.lock"]

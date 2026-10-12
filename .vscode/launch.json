@@ -8,10 +8,10 @@
     "configurations": [
         {
             "name": "Mkdocs serve",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "module": "mkdocs",
-            "justMyCode": false,
+            "justMyCode": true,
             "args": [
                 "serve"
             ]

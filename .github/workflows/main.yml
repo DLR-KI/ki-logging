@@ -10,7 +10,7 @@ on:
 
 env:
   # Python
-  PYTHON_VERSION: "3.10"
+  PYTHON_VERSION: "3.11"
   # Caching
   UV_CACHE_DIR: ${{ github.workspace }}/.cache/uv
   PREK_HOME: ${{ github.workspace }}/.cache/prek

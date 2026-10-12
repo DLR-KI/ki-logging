@@ -13,7 +13,6 @@
         "--shell", "bash"
     ],
     "files.associations": {
-        ".markdownlint.json": "jsonc",
         "pyproject.toml": "ini"
     },
     "files.watcherExclude": {
