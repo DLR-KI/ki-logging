@@ -5,7 +5,7 @@ SPDX-License-Identifier: Apache-2.0
 
 # DLR-KI Logging Module
 
-<!-- [![DOI](https://zenodo.org/badge/770398220.svg)](https://doi.org/10.5281/zenodo.13951179) -->
+[![DOI](https://zenodo.org/badge/1415593624.svg)](https://doi.org/10.5281/zenodo.23472601)
 
 This repository contains a small Python package designed to simplify the process of enabling consistent logging across multiple projects.
 Instead of copying code from one project to another, this package provides a simple, reusable solution.

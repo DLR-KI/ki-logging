@@ -29,9 +29,9 @@ authors:
     alias: DLR
     website: 'https://www.dlr.de/en'
     tel: '+49 2203 6010'
-# identifiers:
-#   - type: doi
-#     value: 10.5281/zenodo.13951180
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23472601
 repository-code: 'https://github.com/DLR-KI/ki-logging'
 url: 'https://dlr-ki.github.io/ki-logging/'
 keywords:
